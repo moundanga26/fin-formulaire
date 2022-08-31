@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+        <form id="regForm" method="post" action="">
+
+        <h1>Formulaire d'inscription des élèves:</h1>
+        
+        <!-- Informations de l'eleve -->
+        <div class="tab">Information de l'élève:
+          <p><input class="form-control mt-3" value="nom" id="nom" type="text" placeholder="Nom" oninput="this.className = ''"></p>
+          <p><input class="form-control mt-3" id="prenom" type="text" placeholder="Prenom" oninput="this.className = ''"></p>
+          <p><select id="sexe" class="form-control mt-3" name="sexe">
+              <option value="">--choisir ton genre--</option>
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
+            </select></p>
+          <p><input class="form-control mt-3" id="date" type="date" placeholder="Date de naissance..." oninput="this.className = ''"></p>
+          <p><input class="form-control mt-3" id="lieu" type="text" placeholder="Lieu de naissance..." oninput="this.className = ''"></p>
+          <select id="pet-select" class="form-control mt-3" name="classe">
+              <option value="">--selectionnez votre Classe--</option>
+              <option value="6eme">6ème</option>
+              <option value="5eme">5ème</option>
+              <option value="4eme">4ème</option>
+              <option value="3eme">3ème</option>
+          </select>
+        </div>
+        
+
+
+        <!--Informations du parent-->
+        <div class="tab">Information du tuteur:
+          <p><input class="form-control mt-3" id="nom_t" type="text" placeholder="Nom..." oninput="this.className = ''"></p>
+          <p><input class="form-control mt-3" id="prenom_t" type="text" placeholder="Prenom..." oninput="this.className = ''"></p>
+          <p><input class="form-control mt-3" id="prefession" type="text" placeholder="Profession..." oninput="this.className = ''"></p>
+          <p><input class="form-control mt-3" id="tel" type="number" placeholder="numéro de téléphone..." oninput="this.className = ''"></p>
+          <p><input class="form-control mt-3" id ="email" type="email" placeholder="Adress email..." oninput="this.className = ''"></p>
+        </div>
+        
+         <!-- <div class="tab"> <span>Informations enregistrées avec succes</span>
+          <p> Merci!</p>
+          
+        </div>         -->
+        
+        <div style="overflow:auto;">
+            <div style="float:right;">
+            <button class="btn btn-init" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn"  onclick="nextPrev(1)">Next</button>
+            <button type="button" id="nextBtn"  onclick="recuperer()">Valider</button>
+        </div>
+        </div>
+  
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+        
+    </form>
+
+
+            <!--tableau d'inscription-->
+        <div style="width: 100%; border: solid 0.2vw black;" class="col-8">
+            <h1>Informations élèves et tuteurs</h1>
+          <table style="width: 100%; border: solid 0.1vw rgb(180, 8, 8);" id="eleve" class="table">
+              <thead>
+                  <tr>
+                      <th>Nom</th>
+                      <th>Prenom</th>
+                      <th>sexe</th>
+                      <th>Date de naissance</th>
+                      <th>Lieu de naissance</th>
+                      <th>Classe</th> 
+                      <th>nom_T</th>
+                      <th>prenom_T</th>
+                      <th>Profession</th>
+                      <th>numéro de téléphone</th>
+                      <th>Adress email</th>
+                  </tr>
+              </thead>
+           
+
+      </div>
+
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
